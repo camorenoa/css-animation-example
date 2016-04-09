@@ -1,0 +1,212 @@
+/*
+//// ---------------------------------------- //
+//// --------------- RESET CSS -------------- //
+//// ---------------------------------------- //
+*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, input, textarea, p, blockquote, th, td, a{
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus {outline:0;}
+*:focus {outline:none;}
+
+*:active {
+    outline:none;
+}
+  
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, 
+img{
+    border:0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var{
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol, ul{
+    list-style: none;   
+}
+
+caption, th{
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after{
+    content: '';
+}
+
+abbr, acronym{
+    border: 0;
+}
+  
+
+/* texts */
+*:link, *:visited{
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, pre, code{
+    font-size: 1em;
+}
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input{
+    margin: 0;
+    padding: 0;
+}
+
+a img, *:link img, *:visited img{
+    border: none;
+}
+
+address{
+    font-style: normal;
+}
+
+img{
+    vertical-align: top;
+}
+
+/*
+//// ---------------------------------------- //
+//// --------------- GENERAL CSS ------------ //
+//// ---------------------------------------- //
+*/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: rgba(255,142,12,1);
+  background: -moz-linear-gradient(top, rgba(255,142,12,1) 0%, rgba(255,183,23,1) 36%, rgba(255,183,23,1) 69%, rgba(255,139,13,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,142,12,1)), color-stop(36%, rgba(255,183,23,1)), color-stop(69%, rgba(255,183,23,1)), color-stop(100%, rgba(255,139,13,1)));
+  background: -webkit-linear-gradient(top, rgba(255,142,12,1) 0%, rgba(255,183,23,1) 36%, rgba(255,183,23,1) 69%, rgba(255,139,13,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,142,12,1) 0%, rgba(255,183,23,1) 36%, rgba(255,183,23,1) 69%, rgba(255,139,13,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,142,12,1) 0%, rgba(255,183,23,1) 36%, rgba(255,183,23,1) 69%, rgba(255,139,13,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,142,12,1) 0%, rgba(255,183,23,1) 36%, rgba(255,183,23,1) 69%, rgba(255,139,13,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8e0c', endColorstr='#ff8b0d', GradientType=0 );
+}
+
+/*
+  PONG TITLE
+*/
+.text-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  top: calc( 50% - 160px );
+  text-align: center;
+}
+
+.title {
+  font-family: 'Droid Sans', sans-serif;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+  font-size: 190px;
+  text-shadow: 2px 2px #000;
+}
+
+.title span {
+  opacity: 0;
+}
+
+.ball {
+  background: rgba(255,0,0,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,0,0,1) 0%, rgba(131,0,0,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,0,0,1)), color-stop(100%, rgba(131,0,0,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,0,0,1) 0%, rgba(131,0,0,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,0,0,1) 0%, rgba(131,0,0,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,0,0,1) 0%, rgba(131,0,0,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,0,0,1) 0%, rgba(131,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#830000', GradientType=1 );
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: calc( 50% - 130px );
+  left: calc( 50% - 165px );
+  z-index: 1;
+}
+.ball-blue {
+  background: rgba(0,0,255,1);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: calc( 50% - 120px );
+  left: -200px;
+}
+
+
+/*
+    PONG ACTIONS
+*/
+.actions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  top: calc( 50% + 70px );
+  text-align: center;
+  max-width: 300px;
+  opacity: 0;
+}
+
+.actions a {
+  font-family: 'Droid Sans', sans-serif;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 40px;
+  text-shadow: 1px 1px #000;
+}
+.actions a:hover {
+  text-shadow: 1.5px 1.5px #000;
+}
+
+
+.bar {
+  width: 20px;
+  height: 155px;
+  position: absolute;
+  box-shadow: 1px 1px 1px #000;
+  top: 5%;
+}
+.bar-yellow {
+  background-color: #f9e500;
+  left: 30px;
+}
+.bar-blue {
+  background-color: #0014a9;
+  right: 30px;
+  top: calc( 100% - 165px );
+}
