@@ -1,0 +1,172 @@
+/*
+//// ---------------------------------------- //
+//// ------------ ANIMATIONS CSS ------------ //
+//// ---------------------------------------- //
+*/
+
+/* 
+ * Big ball 
+ */
+.ball {
+  animation-duration: 2.5s;
+  animation-name: moveball;
+  animation-timing-function: ease-out;
+}
+@keyframes moveball {
+  0%, 15% {
+    top: calc( 50% - 180px );
+    left: 50px;
+  }
+
+  20% {
+    width: 160px;
+    height: 160px;
+  }
+
+  30% {
+    height: 120px;
+    width: 180px;
+    top: calc( 100% - 120px );
+    left: 50%;
+  }
+
+  35%, 50% {
+    width: 160px;
+    height: 160px;
+  }
+
+  55% {
+    height: 180px;
+    width: 140px;
+    top: calc( 50% - 130px );
+    left: calc( 100% - 190px );
+  }
+
+  75% {
+    height: 140px;
+    width: 180px;
+    top: 0;
+    left: calc( 50% - 160px );
+  }
+
+  100% {
+    height: 160px;
+    width: 160px;
+    top: calc( 50% - 130px );
+    left: calc( 50% - 165px );
+    animation-timing-function: ease-out;
+  }
+}
+
+.ball-blue {
+  animation-duration: 2s;
+  animation-delay: 4.5s;
+  animation-name: moveBlueBall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes moveBlueBall {
+  0% {
+    top: calc( 50% - 10px );
+    left: 50px;
+  }
+  25% {
+    top: calc( 100% - 50px );
+    left: 50%;
+  }
+
+  50% {
+    top: calc( 50% - 130px );
+    left: calc( 100% - 100px );
+  }
+
+  75% {
+    top: 0;
+    left: calc( 50% - 160px );
+  }
+
+  100% {
+    top: calc( 50% - 10px );
+    left: 50px;
+  }
+}
+
+.text-wrapper,
+.actions {
+  /* Transition */
+  transition-duration: 1s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+  opacity: 0;
+  /* Animation */
+  animation-name: titleWrapper;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+.text-show {
+  opacity: 1;
+}
+@keyframes titleWrapper {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    -webkit-filter: blur(90px);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    -webkit-filter: blur(0px);
+  }
+}
+
+.bar {
+  animation-iteration-count: infinite;
+}
+.bar-yellow {
+  animation-name: moveBarOne;
+  animation-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+@keyframes moveBarOne {
+  0%, 10% {
+    top: 5%; 
+  }
+  35%, 40% {
+    top: 50%;
+  }
+  50%, 60% {
+    top: 30%;
+  }
+  70%, 80% {
+    top: 60%;
+  }
+  95%, 100% {
+    top: 5%;
+  }
+}
+
+.bar-blue {
+  animation-name: moveBarTwo;
+  animation-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+@keyframes moveBarTwo {
+  0%, 10% {
+    top: calc( 100% - 165px ); 
+  }
+  35%, 40% {
+    top: calc( 90% - 165px );
+  }
+  60%, 65% {
+    top: calc( 80% - 165px );
+  }
+  70%, 80% {
+    top: calc( 50% - 165px );
+  }
+  95%, 100% {
+    top: calc( 100% - 165px );
+  }
+}
