@@ -1,6 +1,6 @@
 {
   "name": "Css-animation-example",
-  "tagline": "This is an example of a simple css animation with css3 transicions and animations",
-  "body": "# css-animation-example\r\nThis is an example of a simple css animation with css3 transicions and animations\r\n",
+  "tagline": "This is an example of a simple css animation with css3 transitions and animations",
+  "body": "# css-animation-example\r\nThis is an example of a simple css animation with css3 transitions and animations\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
